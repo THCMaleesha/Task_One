@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import {Form} from 'react-bootstrap';
+import {View, ScrollView, Text} from 'react'
 import Axios from 'axios';
 
 function App() {
@@ -24,6 +25,14 @@ function App() {
   
   return (
     <div className='app'>
+      <h1>DOGS BREEDS LIST</h1>
+      <ul>
+      {breed.map((data) => (
+        <li key={data}> 
+          <p>{data}</p>
+        </li>
+      ))}
+    </ul>
       <Form>
         <Form.Group>
           <Form.Control as='select'>
